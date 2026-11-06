@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-plus-jakarta: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-outfit: 'Outfit', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-brand-neutral-50 text-brand-navy antialiased selection:bg-brand-accent/20 selection:text-brand-navy;
+  }
+}
+

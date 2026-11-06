@@ -1,0 +1,256 @@
+import { CategoryNode } from '@/types/database';
+
+/**
+ * Estructura Oficial del Catálogo MenteLúdica (Sección 5 del Prompt Maestro)
+ * 4 Categorías Principales y 29 Subcategorías Especializadas.
+ */
+export const INITIAL_CATALOG_TAXONOMY: CategoryNode[] = [
+  {
+    id: 'cat-construccion',
+    parentId: null,
+    name: 'Juegos de construcción',
+    slug: 'juegos-de-construccion',
+    description:
+      'Sets de ingeniería, arquitectura y bloques creativos compatibles con sistemas estándar para estimular el pensamiento espacial.',
+    iconName: 'Blocks',
+    subcategories: [
+      {
+        id: 'sub-bloques',
+        parentId: 'cat-construccion',
+        name: 'Bloques de construcción',
+        slug: 'bloques-de-construccion',
+        description: 'Sistemas de bloques ensamblables de alta precisión.',
+      },
+      {
+        id: 'sub-arquitectura',
+        parentId: 'cat-construccion',
+        name: 'Sets de arquitectura',
+        slug: 'sets-de-arquitectura',
+        description: 'Monumentos históricos y maravillas arquitectónicas a escala.',
+      },
+      {
+        id: 'sub-vehiculos',
+        parentId: 'cat-construccion',
+        name: 'Vehículos armables',
+        slug: 'vehiculos-armables',
+        description: 'Autos deportivos, maquinaria pesada y aeronaves con mecanismos.',
+      },
+      {
+        id: 'sub-figuras',
+        parentId: 'cat-construccion',
+        name: 'Figuras y personajes',
+        slug: 'figuras-y-personajes',
+        description: 'Personajes articulados y figuras de colección armables.',
+      },
+      {
+        id: 'sub-construcciones-3d',
+        parentId: 'cat-construccion',
+        name: 'Construcciones 3D',
+        slug: 'construcciones-3d',
+        description: 'Estructuras tridimensionales mecánicas y magnéticas.',
+      },
+      {
+        id: 'sub-kits-creativos',
+        parentId: 'cat-construccion',
+        name: 'Kits creativos',
+        slug: 'kits-creativos',
+        description: 'Cajas de diseño libre y creación abierta STEM.',
+      },
+      {
+        id: 'sub-modelos-coleccionables',
+        parentId: 'cat-construccion',
+        name: 'Modelos coleccionables',
+        slug: 'modelos-coleccionables',
+        description: 'Ediciones de exhibición para jóvenes y adultos.',
+      },
+    ],
+  },
+  {
+    id: 'cat-rompecabezas',
+    parentId: null,
+    name: 'Rompecabezas',
+    slug: 'rompecabezas',
+    description:
+      'Desafíos visuales y táctiles en cartón premium, madera cortada a láser y estructuras 3D.',
+    iconName: 'Puzzle',
+    subcategories: [
+      {
+        id: 'sub-rompecabezas-tradicionales',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas tradicionales',
+        slug: 'rompecabezas-tradicionales',
+        description: 'Puzzles de 500 a 3000 piezas con acabado antirreflejo.',
+      },
+      {
+        id: 'sub-rompecabezas-3d',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas 3D',
+        slug: 'rompecabezas-3d',
+        description: 'Maquetas tridimensionales autoportantes sin pegamento.',
+      },
+      {
+        id: 'sub-rompecabezas-madera',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas de madera',
+        slug: 'rompecabezas-de-madera',
+        description: 'Piezas artísticas con corte láser de alta precisión.',
+      },
+      {
+        id: 'sub-rompecabezas-educativos',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas educativos',
+        slug: 'rompecabezas-educativos',
+        description: 'Mapas, anatomía, astronomía y aprendizaje didáctico.',
+      },
+      {
+        id: 'sub-rompecabezas-personalizados',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas personalizados',
+        slug: 'rompecabezas-personalizados',
+        description: 'Fabricados a pedido con tus fotografías o diseños especiales.',
+      },
+      {
+        id: 'sub-rompecabezas-adultos',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas para adultos',
+        slug: 'rompecabezas-para-adultos',
+        description: 'Alta complejidad, arte clásico, contemporáneo y retos extremos.',
+      },
+      {
+        id: 'sub-rompecabezas-infantiles',
+        parentId: 'cat-rompecabezas',
+        name: 'Rompecabezas infantiles',
+        slug: 'rompecabezas-infantiles',
+        description: 'Piezas ergonómicas y seguras por etapas de desarrollo.',
+      },
+    ],
+  },
+  {
+    id: 'cat-juegos-mesa',
+    parentId: null,
+    name: 'Juegos de mesa',
+    slug: 'juegos-de-mesa',
+    description:
+      'Experiencias compartidas de estrategia, ingenio y diversión para familias, amigos y colegios.',
+    iconName: 'Dices',
+    subcategories: [
+      {
+        id: 'sub-juegos-familiares',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos familiares',
+        slug: 'juegos-familiares',
+        description: 'Dinámicas accesibles para conectar a todas las generaciones.',
+      },
+      {
+        id: 'sub-juegos-estrategia',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos de estrategia',
+        slug: 'juegos-de-estrategia',
+        description: 'Gestión de recursos, planificación táctica y toma de decisiones.',
+      },
+      {
+        id: 'sub-juegos-logica',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos de lógica',
+        slug: 'juegos-de-logica',
+        description: 'Retos cognitivos individuales y grupales de deducción.',
+      },
+      {
+        id: 'sub-juegos-cartas',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos de cartas',
+        slug: 'juegos-de-cartas',
+        description: 'Mazos portátiles, rápidos y altamente rejugables.',
+      },
+      {
+        id: 'sub-juegos-habilidad',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos de habilidad',
+        slug: 'juegos-de-habilidad',
+        description: 'Equilibrio, destreza manual, reflejos y coordinación.',
+      },
+      {
+        id: 'sub-juegos-educativos',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos educativos',
+        slug: 'juegos-educativos',
+        description: 'Refuerzo de matemáticas, vocabulario, memoria y ciencias.',
+      },
+      {
+        id: 'sub-juegos-desafios',
+        parentId: 'cat-juegos-mesa',
+        name: 'Juegos de desafíos y competencias',
+        slug: 'juegos-de-desafios-y-competencias',
+        description: 'Trivias, retos por equipos y velocidad mental.',
+      },
+    ],
+  },
+  {
+    id: 'cat-souvenirs',
+    parentId: null,
+    name: 'Souvenirs personalizados',
+    slug: 'souvenirs-personalizados',
+    description:
+      'Regalos únicos, recuerdos para eventos y merchandising corporativo diseñado a medida en Arequipa.',
+    iconName: 'Sparkles',
+    subcategories: [
+      {
+        id: 'sub-llaveros-personalizados',
+        parentId: 'cat-souvenirs',
+        name: 'Llaveros personalizados',
+        slug: 'llaveros-personalizados',
+        description: 'Acrílico, madera y metal grabados con nombres o diseños.',
+      },
+      {
+        id: 'sub-recuerdos-cumpleanos',
+        parentId: 'cat-souvenirs',
+        name: 'Recuerdos para cumpleaños',
+        slug: 'recuerdos-para-cumpleanos',
+        description: 'Detalles lúdicos y creativos para invitados.',
+      },
+      {
+        id: 'sub-regalos-corporativos',
+        parentId: 'cat-souvenirs',
+        name: 'Regalos corporativos',
+        slug: 'regalos-corporativos',
+        description: 'Kits ejecutivos y juegos personalizados para empresas e instituciones.',
+      },
+      {
+        id: 'sub-articulos-fotografias',
+        parentId: 'cat-souvenirs',
+        name: 'Artículos con fotografías',
+        slug: 'articulos-con-fotografias',
+        description: 'Cuadros, bloques fotográficos y recuerdos impresos en alta definición.',
+      },
+      {
+        id: 'sub-articulos-nombres',
+        parentId: 'cat-souvenirs',
+        name: 'Artículos con nombres',
+        slug: 'articulos-con-nombres',
+        description: 'Organizadores, lámparas LED y accesorios con nombre propio.',
+      },
+      {
+        id: 'sub-productos-logotipos',
+        parentId: 'cat-souvenirs',
+        name: 'Productos con logotipos',
+        slug: 'productos-con-logotipos',
+        description: 'Merchandising lúdico con identidad de marca corporativa.',
+      },
+      {
+        id: 'sub-regalos-fechas-especiales',
+        parentId: 'cat-souvenirs',
+        name: 'Regalos para fechas especiales',
+        slug: 'regalos-para-fechas-especiales',
+        description: 'Aniversarios, Día de la Madre, Día del Padre y graduaciones.',
+      },
+      {
+        id: 'sub-recuerdos-eventos',
+        parentId: 'cat-souvenirs',
+        name: 'Recuerdos para eventos',
+        slug: 'recuerdos-para-eventos',
+        description: 'Bodas, bautizos, eventos escolares y conferencias.',
+      },
+    ],
+  },
+];
+
